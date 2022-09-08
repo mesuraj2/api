@@ -16,7 +16,7 @@ router.get('/',(req,res)=>{
 })
 router.get('/:id',(req,res)=>{
     id=req.params.id
-    Note.find({_id:id}  ,(err,data)=>{
+    Note.find({title:id}  ,(err,data)=>{
         if(!err){
             res.send(data)
         }
